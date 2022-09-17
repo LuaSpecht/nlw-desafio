@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+body {
+    background-image: url('estrelas.png');
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+
+}
+main {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+header {
+    padding-top: 32px;
+    
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #19a2cc 0%, #ece06c 50.52%, #dd1cb3 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+    animation: fromTop .7s .4s backwards;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+section {
+    padding-top: 4px;
+    border-radius: 8px;
+    background-image: linear-gradient(90deg, #19a2cc 0%, #ece06c 50.52%, #dd1cb3);
+    color: white;
+}
+
+section div{
+    background-color: #2a2634;
+    padding: 32px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #a1a1aa;
+}
+
+section ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+.series-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.movies-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #443e54;
+}
+
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
